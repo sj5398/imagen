@@ -1,12 +1,23 @@
-body {
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
     padding: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('abrir con bloc de notas.jpeg');
-    background-size: contain;     /* <--- CAMBIO CLAVE: Ajusta la imagen completa sin cortarla */
-    background-position: center;  /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que se repita */
-    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
-    background-color: #000000;   /* Opcional: Define un color de fondo (negro) para los bordes */
+    background-color: #000000; /* Fondo negro alrededor */
+    overflow: hidden; /* Evita barras de desplazamiento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-fondo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain; /* Muestra toda la imagen completa sin recortar nada */
+    display: block;
+    user-select: auto; /* Asegura que la interacción e inspección con el ratón esté permitida */
 }
